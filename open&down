@@ -1,2 +1,29 @@
-# game
-simple game test
+
+float mov =100;
+float mov1 = 100;
+PImage worker;
+ 
+
+void setup() {
+size(500, 500);  
+worker= loadImage("worker.png");
+}
+
+void draw() {
+background(255);
+image(worker, mov, mov1, width/8, height/8);
+
+ 
+}
+
+
+void keyPressed() {
+  if (key == CODED) {
+    if (keyCode == UP) {
+      mov = 300 ;
+    mov1 = 50;}
+    } if (keyCode == DOWN) {
+       mov = 50;
+       mov1 = 300;
+    } 
+  } 
