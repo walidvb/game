@@ -1,6 +1,7 @@
 
-float mov =100;
-float mov1 = 100;
+float x =100;
+float y = 100;
+float step = 300;
 PImage worker;
  
 
@@ -11,7 +12,7 @@ worker= loadImage("worker.png");
 
 void draw() {
 background(255);
-image(worker, mov, mov1, width/8, height/8);
+image(worker, x, y, width/8, height/8);
 
  
 }
@@ -20,10 +21,15 @@ image(worker, mov, mov1, width/8, height/8);
 void keyPressed() {
   if (key == CODED) {
     if (keyCode == UP) {
-      mov = 300 ;
-    mov1 = 50;}
-    } if (keyCode == DOWN) {
-       mov = 50;
-       mov1 = 300;
+      y -= step ;
     } 
+    else if (keyCode == DOWN) {
+       y += step;
+    }
+    else if  (keyCode == LEFT){
+     x -= step;
+    }
+    else if (keyCode == RIGHT){
+     x += step
+    }
   } 
